@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>New Style Cabeleleiros </title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="script.js"></script>
+
+    </head>
+    <body>
+        <header class="hedereqp">
+            Contato
+        </header>
+
+        <section class="wrapper">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img src="img/icon_home_br.png"></a>
+                        <span><a href="index.html">O Salão</a></span>
+                    </li>
+                    <li>
+                        <a href="equipe.html">
+                            <img src="img/icon_chart_br.png"></a>
+                        <span><a href="equipe.html">Equipe</a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="news.html">
+                            <img src="img/icon_page_br.png">
+                        </a>
+                        <span><a href="news.html">News</a></span>
+                    </li>
+                    <li>
+                        <a href="contato.html">
+                            <img src="img/icon_message_br.png">
+                        </a>
+                        <span><a href="contato.html">Contato</a></span>
+                    </li>
+                </ul>
+            </nav>
+
+            <section  class="container">
+                <article id="artform">
+                    <form id="form">
+                        <input type="text" name="txtnome" placeholder="*nome:" id="nome"><br>
+                        <span id="svazio1"></span><br/>
+                        <input type="email" name="txtemail" placeholder="*email:" id="email"><br>
+                        <span id="svazio2"></span><br/>
+                        <input type="tel" name="urstel" placeholder="*(99)99999-9999" id="telefone"><br>
+                        <span id="svazio3"></span><br/><br>
+                        <textarea rows="5" cols="40" name="msg" placeholder="*digite sua mensagem:" id="mensagem"></textarea>
+                        <span id="svazio4"></span><br/>
+                        <input type="button" id="enviar" value="Enviar">
+                    </form>
+
+                    <div id="contato">
+                        <h2>Contato</h2>
+                        <p>
+                            Vamos adorar te ouvir!<br>
+                            Preencha o formulário e mande sua mensagem.
+                        </p>
+                        <p>Rua Pamplona 1500, Jardim Paulista, São Paulo - SP</p>
+                        <p>newstyle@gmail.com</p>
+                        <p>(11)9999-9999</p>
+                    </div>
+
+                    <div id="comentarios"></div>
+
+                </article>
+            </section>
+        </section>
+
+      <!--  <div data-mvc-banner="leaderboard"></div>
+
+        <script type="text/javascript"> 
+            (function(storeName) {
+                var b = document.createElement('script');
+                b.type = 'text/javascript'; 
+                b.async = true; b.src = 'https://www.magazinevoce.com.br/js/banner.js?store='+ storeName; 
+                var s = document.getElementsByTagName('script')[0]; 
+                s.parentNode.insertBefore(b, s); })('renatodcr'); 
+        </script> -->
+
+        <footer> &copy; 2020 New Style</footer>
+
+    </body>
+    <script>
+        $(function(){
+            $("#enviar").click(function(){
+                $("#svazio1").empty();
+                $("#svazio2").empty();
+                $("#svazio3").empty();
+                $("#svazio4").empty();
+
+                var nome = $("#nome").val();
+                var email = $("#email").val();
+                var telefone = $("#telefone").val();
+                var mensagem = $("#mensagem").val();
+
+                if(validaCampos() == true){
+                    $("#comentarios").append("<strong>Nome: "+nome+"</strong><br> Telefone: "
+                                             +telefone+"<br> Email: "+email
+                                             +"<br> Mensagem: "+mensagem+"<hr><br>");
+                }
+
+            });
+        });
+
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
